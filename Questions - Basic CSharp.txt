@@ -1,0 +1,465 @@
+1.	What is the difference between an abstract method & virtual method?
+Answer: An Abstract method does not provide an implementation and forces overriding to the deriving class (unless the deriving class also an abstract class), where as the virtual method has an implementation and leaves an option to override it in the deriving class. Thus Virtual method has an implementation & provides the derived class with the option of overriding it. Abstract method does not provide an implementation & forces the derived class to override the method.
+
+eg.ToString method of Object class is a virtual method....you can override if required...but not compulsory
+
+2.	What is the difference between static or dynamic assemblies?
+
+
+Answer: Assemblies can be static or dynamic. Static assemblies can include .NET Framework types (interfaces and classes), as well as resources for the assembly (bitmaps, JPEG files, resource files, and so on). Static assemblies are stored on disk in portable executable (PE) files. 
+
+You can also use the .NET Framework to create dynamic assemblies, which are run directly from memory and are not saved to disk before execution. You can save dynamic assemblies to disk after they have executed.
+
+3.	What are the difference between Structure and Class?
+Answer: 
+	Structures are value type and Classes are reference type.
+	Structures can not have constructors or destructors. Classes can have both constructors and destructors.
+	Structures do not support Inheritance, while Classes support Inheritance.
+
+
+4.	What are the difference between const and readonly?
+Answer: 
+	A const can not be static, while readonly can be static.
+	A const need to be declared and initialized at declaration only, while a readonly can be initialized at declaration or by the code in the constructor.
+	A const’s value is evaluated at design time, while a readonly’s value is evaluated at runtime.
+
+5.	What is Difference between Namespace and Assembly?
+Answer: Namespace is a logical design-time naming convenience, whereas an assembly establishes the name scope for types at run time.
+
+
+
+6.	What is the difference between early binding and late binding?
+Answer: Calling a non-virtual method, decided at a compile time is known as early binding.  Eg. Overloading... A  method with the same name and different signature within a class. Eg.Console.WriteLine
+	Calling a virtual method (Pure Polymorphism), decided at a runtime is known as late binding. Eg.Overriding 
+
+
+•	Simple Questions
+
+
+1.	What is IL? (What is MSIL or CIL, What is JIT?)
+MSIL is the CPU –independent instruction set into which .Net framework programs are compiled. It contains instructions for loading, storing initializing, and calling methods on objects.
+
+2.	What is CLR?
+Answer: CLR also known as Common Language Run time provides a environment in which program are executed, it activate object, perform security check on them, lay them out in the memory, execute them and garbage collect them.
+
+3.	What is CTS?
+Answer: The common type system is a rich type system, built into the common language runtime, which supports the types and operations found in most programming languages.
+
+4.	What is CLS?
+Answer: CLS also known as Common Language Specification defines the rules which all language must support, in order to be a part of .Net framework. The Common Language Specification is a set of constructs and constraints that serves as a guide for library writers and compiler writers. It allows libraries to be fully usable from any language supporting the CLS, and for those languages to integrate with each other. The Common Language Specification is a subset of the common type system. The Common Language Specification is also important to application developers who are writing code that will be used by other developers.
+
+5.	What is an assembly?  
+Answer: Assemblies are the building blocks of the .NET framework. They are the logical grouping of the functionality in a physical file. 
+
+6.	What are different types of Assemblies? 
+Answer: Single file and multi file assembly. Assemblies can be static or dynamic. Private assemblies and shared assemblies
+
+7.	How many classes can a single .NET DLL contain? 
+Answer: It can contain many classes.
+
+8.	What are the advantages of an assembly?
+Answer: Increased performance. Better code management and encapsulation. It also introduces the n-tier concepts and business logic.
+
+9.	What is the purpose of an Assembly?
+Answer: An assembly controls many aspects of an application. The assembly handles versioning, type and class scope, security permissions, as well as other metadata including references to other assemblies and resources. The rules described in an assembly are enforced at runtime.
+
+10.	What a static assembly consist of in general?
+Answer: In general, a static assembly consist of the following four elements:
+	Assembly Manifest, which contains the assembly metadata.
+	Type Metadata.
+	MSIL code that implements the types.
+	A set of resources.
+From above all only the manifest is required, however the other types and resources add the additional functionality to the assembly.
+
+11.	What is GAC or Global Assembly Cache?
+Answer: Global Assembly Cache (GAC) is a common place to share the .NET assemblies across many applications. GAC caches all strong named assembly references within it. All System assemblies that come with the .NET framework reside in the GAC.
+
+12.	How to view an assembly?
+Answer: We can use the tool "ildasm.exe" known as "Assembly Disassembler" to view the assembly.
+
+13.	What are the satellite assemblies?
+Answer: in a multilingual or multi-cultural application, the localized assemblies, which contain language specific instructions that modify the core application, are kept separately and they are called satellite assemblies.
+
+14.	What namespaces are necessary to create a localized application?
+Answer: System.Globalization, System.Resources
+
+12.	What does an assembly contain?
+Answer: 
+•	Manifest - The metadata describing the information below.
+•	Assembly name - Aids in versioning and visibility scope.
+•	Version information - The version number is integrated into the assembly's identity.
+•	Types - Boundaries and scopes of methods, classes, properties, events and attributes.
+•	Locale - Information describing language/culture.
+•	Cryptographic Hash - Public key encoded hash acting as version/security check.
+•	Security Permissions - The permissions within the assembly determine the permissions that can be granted for all aspects of the assembly contents.
+
+13.	What does an assembly manifest contains?
+Answer: It contains assembly name, version number (major.minor.build.revision) and culture Information. It also specifies the strong name information, which is useful for shared assemblies, and list of files, an assembly contains. It also provides information for type references in an assembly and other referenced assemblies.
+
+14.	Which tool is used to deploy an assembly, so as the assembly is available to all the application?
+Answer: The GacUtil.exe is the tool, which allows us to add any assembly to the windows GAC (Global Assembly Catche).
+
+15.	How many catch statements can be associated with single try statement?
+Answer: There can be a zero or more catch statement for each try statement. So it has not limit to the number of catch statement per try statement.
+
+16.	What is Console and System a Class/a Data Member/a routine/a namespace or a type?
+Answer: Console is a class and System is namespace.
+
+17.	How many values can be returned from a method in C#?
+Answer: Only one value can be returned from method, however you can use ref or out parameters to change more than one value in called method.
+
+18.	How to declare a variable named “this” in C#, with data type string?
+Answer: string @this;
+19.	Can we change the dimension of Array at run time like Array [3, 4]?
+Answer: Yes, We can change only the first position of array dimension.
+20.	What keyword is used to accept a variable number of parameter in a method?
+Answer: “params” keyword is used as to accept variable number of parameters.
+21.	What is a Namespace? What is the use of a namespace?
+Answer: Namespaces are logical grouping of classes and other types in hierarchical structure. Namespaces are useful to avoid collision or ambiguity among the classes and type names. Another use of the namespace is to arrange a group of classes for a specific purpose.
+22.	What does a keyword using works for?
+Answer: Using is just a convention or a short-cut method which allows us to access the classes in a namespace by referencing it once. So when ever we want use the classes or methods in them, we can avoid typing the entire namespace hierarchy. However it is not a good practice when there are likely chances to have name ambiguity or collision of class names.
+23.	 What is Enums in C#?
+Answer: Enums or Enumerators are used to declare a set of related constants (default start with 0); they are only available with primitive data types like int and short etc. 
+24.	What is Delegates?
+Answer: Delegates are a type-safe, object-oriented implementation of function pointers and are used in many situations where a component needs to call back to the component that is using it. Delegates are generally used as basis of events, which allow any delegate to easily be registered for as event.
+25.	What do you mean by boxing and un-boxing?
+Answer: C# provides us with Value types and Reference Types. Value Types are stored on the stack and Reference types are stored on the heap. The conversion of value type to reference type is known as boxing and converting reference type back to the value type is known as un-boxing.
+e.g. 
+int x = 10; 
+
+object o = x ;  // Implicit boxing 
+object o = (object) x; // Explicit Boxing
+
+x = o; // Implicit Un-Boxing
+x = (int)o; // Explicit Un-Boxing
+
+26.	What is a Static class? What are its features?
+Answer: Static class is a class which can be used or accessed without creating an instance of the class.
+Important Features:
+i.	Static class only contains static members and a private constructor.
+ii.	Static class cannot be instantiated.
+iii.	Static classes are sealed by default and therefore cannot be inherited.
+27.	What is sealed class? What are its features?
+Answer: Sealed classes are those classes which can not be inherited and thus any sealed class member can not be derived in any other class. A sealed class cannot also be an abstract class.
+In C# structs are implicitly sealed; therefore, they cannot be inherited.
+28.	Can we declare a method as sealed?
+Answer: In C# a method can't be declared as sealed. However when we override a method in a derived class, we can declare the overridden method as sealed. By declaring it as sealed, we can avoid further overriding of this method.
+E.g. 
+using System;
+class MyClass1 
+{
+   public int x; 
+   public int y;
+   public virtual void Method() {
+	Console.WriteLine("virtual method");   }
+}
+class MyClass : MyClass1
+{
+   public override sealed void Method()   {
+	Console.WriteLine("sealed method");   }	
+}
+class MainClass 
+{   public static void Main()    {
+      MyClass1 mC = new MyClass(); 
+      mC.x = 110;
+      mC.y = 150;
+      Console.WriteLine("x = {0}, y = {1}", mC.x, mC.y); 
+      mC.Method();   }
+}
+
+29.	How to create a shared assembly or add an assembly to GAC?
+Answer: There are several ways an assembly can be added to GAC. 
+i.	Use .msi installer designed to work with the global assembly cache.
+ii.	Use GACUtil.exe provided by the .NET Framework SDK.
+iii.	Use Windows Explorer to drag assemblies into the cache.
+
+30.	What is strong Name?
+Answer: 
+31.	What is reflection?
+Answer: All .NET compilers produce metadata about the types defined in the modules they produce. This metadata is packaged along with the module (modules in turn are packaged together in assemblies), and can be accessed by a mechanism called reflection. The System.Reflection namespace contains classes that can be used to interrogate the types for a module/assembly.
+32.	How can I produce an assembly?
+Answer: Simply compile your class/module with the following command.
+C#.Net - CSC /t:library yourclassname.cs
+VB.Net - VBC /t:library yourmodulename.vb
+33.	Why main function is static? 
+ Answer: To ensure there is only one entry point to the application.
+34.	What is the difference between Compiler and Interpreter?
+Answer: 
+Compiler: 
+A compiler is a program that translates program (called source code) written in some high level language into object code. The compiler derives its name from the way it works, looking at the entire piece of source code and collecting and reorganizing the instructions. A compiler translates high-level instructions directly into machine language and this process is called compiling.
+Interpreter: 
+An interpreter translates high-level instructions into an intermediate form, which it then executes. Interpreter analyzes and executes each line of source code in succession, without looking at the entire program; the advantage of interpreters is that they can execute a program immediately. Compilers require some time before an executable program emerges. However, programs produced by compilers run much faster than the same programs executed by an interpreter.
+Compiled programs generally run faster than interpreted programs. The advantage of an interpreter, however, is that it does not need to get through the compilation stage during which machine instructions are generated. This process can be time-consuming if the program is long. The interpreter, on the other hand, can immediately execute high-level programs. For this reason, interpreters are sometimes used during the development of a program, when a programmer wants to add small sections at a time and test them quickly.Because compilers translate source code into object code, which is unique for each type of computer, many compilers are available for the same language. For example, there is a C compiler for PCs and another for UNIX computers. 
+
+•	OOPS
+1.	What are the OOPS concepts?
+Answer: 
+1) Encapsulation: It is the mechanism that binds together code and data in manipulates, and keeps both safe from outside interference and misuse. In short it isolates a particular code and data from all other codes and data. A well-defined interface controls the access to that particular code and data.
+2) Inheritance: It is the process by which one object acquires the properties of another object. This supports the hierarchical classification. Without the use of hierarchies, each object would need to define all its characteristics explicitly. However, by use of inheritance, an object need only define those qualities that make it unique within its class. It can inherit its general attributes from its parent. A new sub-class inherits all of the attributes of all of its ancestors.
+3) Polymorphism: It is a feature that allows one interface to be used for general class of actions. The specific action is determined by the exact nature of the situation. In general polymorphism means "one interface, multiple methods"; this means that it is possible to design a generic interface to a group of related activities. This helps reduce complexity by allowing the same interface to be used to specify a general class of action. It is the compiler's job to select the specific action (that is, method) as it applies to each situation. 
+2.	What is a class?
+Answer: Class is concrete representation of an entity. It represents a group of objects, which hold similar attributes and behavior. It provides Abstraction and Encapsulations.
+3.	What is an Object? What is Object Oriented Programming?
+Answer: Object represents/resembles a Physical/real entity. An object is simply something you can give a name. Object Oriented Programming is a Style of programming that represents a program as a system of objects and enables code-reuse.
+4.	What is Encapsulation?
+Encapsulation is binding of attributes and behaviors. Hiding the actual implementation and exposing the functionality of any object. Encapsulation is the first step towards OOPS, is the procedure of covering up of data and functions into a single unit (called class). Its main aim is to protect the data from out side world.
+5.	What is Abstraction?
+Answer: Hiding the complexity. It is a process of defining communication interface for the functionality and hiding rest of the things.
+6.	What is Overloading?
+Answer: Adding a new method with the same name in same/derived class but with different number/types of parameters. It implements Polymorphism.
+7.	What is Overloading?
+Answer: A process of creating different implementation of a method having a same name as base class, in a derived class. It implements Inheritance.
+8.	What is Shadowing?
+Answer: When the method is defined as Final/sealed in base class and not override able and we need to provide different implementation for the same. This process is known as shadowing, uses shadows/new keyword.
+9.	What is Inheritance?
+Answer: It is a process of acquiring attributes and behaviors from another object (normally a class or interface).
+10.	What is an Abstract class?
+Answer: An abstract class is a special kind of class that cannot be instantiated. It normally contains one or more abstract methods or abstract properties. It provides body to a class.
+11.	What is an Interface?
+Answer: An interface has no implementation; it only has the signature or in other words, just the definition of the methods without the body. 
+12.	What is Polymorphism?
+Answer: Mean by more than one form. Ability to provide different implementation based on different number/type of parameters.
+13.	What is Pure-Polymorphism?
+Answer: When a method is declared as abstract/virtual method in a base class and which is overridden in a base class. If we create a variable of a type of a base class and assign an object of a derived class to it, it will be decided at a run time, which implementation of a method is to be called. 
+ This is known as Pure-Polymorphism or Late-Binding. 
+14.	What is a Constructor?
+Answer: A special Method Always called whenever an instance of the class is created.
+15.	What is a Destructor?
+Answer: A special method called by GC. Just before object is being reclaimed by GC.
+16.	How a base class method is hidden?
+Answer: Hiding a base class method by declaring a method in derived class with keyword new. This will override the base class method and old method will be suppressed.
+17.	What Command is used to implement properties in C#?
+Answer: get & set access modifiers are used to implement properties in c#.
+18.	What is method overloading?
+Answer: Method overloading is having methods with same name but carrying different signature, this is useful when you want a method to behave differently depending upon a data passed to it.
+19.	Can constructors have parameters?
+20.	What are Static Assembly and Dynamic Assembly?
+Answer: Static assemblies can include .NET Framework types (interfaces and classes) as well as resources for the assembly (bitmaps, JPEG files, resource files, and so forth). Static assemblies are stored on disk. Dynamic assemblies run directly from memory and are not saved to disk before execution. 
+21.	Describe the functionality of an assembly.
+Answer: It is the smallest unit that has version control. All types and resources in the same assembly are versioned as a unit and support side by side execution. Assemblies contain the metadata and other identities which allow the common language runtime to execute. They are the boundaries providing the type check. They the unit where security permissions are requested and granted.
+
+22.	What is serialization?
+Answer: Serialization is the process of converting an object into a stream of bytes. De-serialization is the opposite process of creating an object from a stream of bytes. Serialization/De-serialization is mostly used to transport objects (e.g. during remoting), or to persist objects (e.g. to a file or database). There are two separate mechanisms provided by the .NET class library for serialization - XmlSerializer and SoapFormatter and BinaryFormatter. Microsoft uses XmlSerializer for Web Services, and uses SoapFormatter/BinaryFormatter for remoting.
+
+23.	What is a static class?
+Answer: When a class has been defined as static, it is not creatable using the new keyword, and it can contain only static members or fields.
+24.	What is static member? 
+Answer: The member defined as static which can be invoked directly from the class level, rather than from its instance.
+25.	What is static function/method?
+Answer: Static methods need not need to create an instance of the class containing it and can be accessed directly from class level.
+26.	What is static constructor? (This is introduced in VS 2005)
+Answer: When constructors are used to set the value of a type’s data at the time of construction, if we want the value of such static data is to be preserved regardless of how many objects of the type are created, we have to define the constructor with static keyword.
+27.	Why Main () method is static?
+Answer: To ensure there is only one entry point to the application.
+28.	What is Reflection? 
+Answer: Reflection is the process of runtime type discovery.
+29.	What do you mean by Serialize?
+Answer: The term serialization describes the process of persisting (and possibly transferring) the state of an object to a stream.
+30.	What is an Asynchronous delegate? (VS 2005)
+Answer: When you invoke a delegate asynchronously, no new thread is created. Instead, the CLR automatically assigns a free thread from a small thread pool that it maintains. Typically, this thread pool starts with one thread and increases to a maximum of about 25 free threads on a single-CPU computer. As a result, if you start 50 asynchronous operations, one after the other, the first 25 will complete first. As soon as one ends, the freed thread is used to execute the next asynchronous operation.
+31.	How to create events for a control? What are custom events? 
+Answer: 
+Declare a public delegate and set of events to listen from.
+public delegate void CarEventHandler(string msg);
+public event CarEventHandler AboutToBlow;
+public event CarEventHandler BlewUp;
+32.	What’s the advantage of using System.Text.StringBuilder over System.String?
+Answer: StringBuilder is more efficient in the cases, where a lot of manipulation is done to the text. Strings are immutable, so each time it’s being operated on, a new instance is created.
+33.	Can you store multiple data types in System.Array?
+Answer: No.
+34.	What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+Answer: System.Array.CopyTo() performs a deep copy while System.Array.Clone() performs a shallow copy.
+35.	How can you sort the elements of the array in descending order?
+Answer: First use Sort () method to sort the array and then call Reverse () method to arrange array elements in descending order.
+36.	What’s the .NET datatype that allows the retrieval of data by a unique key?
+Answer: A HashTable.
+37.	What’s class SortedList underneath? 
+Answer: A sorted HashTable.
+38.	Will finally block get executed if the exception had not occurred? 
+Answer: Yes.
+39.	When you inherit a protected class-level variable, who is it available to? 
+Answer: Classes in the same namespace. 
+40.	Are private class-level variables inherited? 
+Answer: Yes, but they are not accessible, so looking at it you can honestly say that they are not inherited. But they are.
+41.	Describe the accessibility modifier protected internal. 
+Answer: It’s available to derived classes and classes within the same Assembly (and naturally from the base class it’s declared in).
+42.	How’s method overriding different from overloading? 
+Answer: When overriding, you change the method behavior for a derived class. Overloading simply involves having a method with the same name within the class.
+43.	What does the keyword virtual mean in the method definition? 
+Answer: The method can be over-ridden. 
+44.	Can you declare the override method static while the original method is non-static? 
+Answer: No, you can’t, the signature of the virtual method must remain the same, only the keyword virtual is changed to keyword override. 
+45.	Can you override private virtual methods? 
+Answer: No, moreover, you cannot access private methods in inherited classes, have to be protected in the base class to allow any sort of access.
+46.	Can you prevent your class from being inherited and becoming a base class for some other classes? 
+Answer: Yes, that’s what keyword sealed in the class definition is for. The developer trying to derive from your class will get a message: cannot inherit from Sealed class WhateverBaseClassName. It’s the same concept as final class in Java.
+47.	Can you allow class to be inherited, but prevent the method from being over-ridden? 
+Answer: Yes, just leave the class public and make the method sealed.
+48.	When do you absolutely have to declare a class as abstract? 
+Answer: When at least one of the methods in the class is abstract. When the class itself is inherited from an abstract class, but not all base abstract methods have been over-ridden.
+49.	Can we declare private methods inside an Interface? Why can’t you specify the accessibility modifier for methods inside the interface? 
+No, they all must be public. Therefore, to prevent you from getting the false impression that you have any freedom of choice, you are not allowed to specify any accessibility, its public by default.
+50.	What’s the difference between an interface and abstract class?
+Answer:  In the interface all methods must be abstract; in the abstract class some methods can be concrete. In the interface no accessibility modifiers are allowed, which is ok in abstract classes.
+51.	If a base class has a bunch of overloaded constructors, and an inherited class has another bunch of overloaded constructors, can you enforce a call from an inherited constructor to an arbitrary base constructor? 
+Answer: Yes, just place a colon, and then keyword base (parameter list to invoke the appropriate constructor) in the overloaded constructor definition inside the inherited class.
+52.	What’s the difference between System.String and System.StringBuilder classes?
+Answer: System.String is immutable; System.StringBuilder was designed with the purpose of having a mutable string where a variety of operations can be performed.
+53.	How do you initiate a string without escaping each backslash? 
+Answer: Put @ sign in front of the double-quoted string.
+e.g. @“C:\Documents and Settings\Administrator\My Documents”; is equivalent to “C:\\Documents and Settings\\Administrator\\My Documents”.
+54.	What are valid signatures for the Main function? 
+Answer:
+public static void Main() 
+public static int Main() 
+public static void Main( string[] args ) 
+public static int Main(string[] args )
+55.	Explain encapsulation.
+Answer: The implementation is hidden, the interface is exposed.
+56.	Where all the value-type variables allocated in the computer RAM? 
+Answer: Stack
+57.	Where do the reference-type variables go in the RAM? 
+Answer: The references go on the stack, while the objects themselves go on the heap.
+58.	What is the difference between the value-type variables and reference-type variables in terms of garbage collection?
+Answer: The value-type variables are not garbage-collected, they just fall off the stack when they fall out of scope, the reference-type objects are picked up by GC when their references go null.
+59.	How do you convert a string into an integer in .NET?
+Answer: Int32.Parse(string), Convert.ToInt32()
+60.	How do you enforce garbage collection in .NET? 
+Answer: System.GC.Collect();
+61.	Can you declare a C++ type destructor in C# like ~MyClass()? 
+Answer: Yes, but what’s the point, since it will call Finalize (), and Finalize () has no guarantees when the memory will be cleaned up, plus, it introduces additional load on the garbage collector. The only time the finalizer should be implemented, is when you’re dealing with unmanaged code.
+62.	What’s the difference between const and readonly?
+Answer: You can initialize readonly variables to some runtime values. Let’s say your program uses current date and time as one of the values that won’t change. This way you declare
+public readonly string DateT = new DateTime().ToString();
+This is not possible with a constant.
+63.	What happens when you encounter a continue statement inside the ‘for loop’? 
+Answer: The code for the rest of the loop is ignored; the control is transferred back to the beginning of the loop.
+64.	Describe the compilation process for .NET code? 
+Answer: Source code is compiled and run in the .NET Framework using a two-stage process. First, source code is compiled to Microsoft intermediate language (MSIL) code using a .NET Framework-compatible compiler, such as that for Visual Basic .NET or Visual C#. Second, MSIL code is compiled to native code.
+65.	In which cases you use override and new base?
+Answer: Use the new modifier to explicitly hide a member inherited from a base class. To hide an inherited member, declare it in the derived class using the same name, and modify it with the new modifier.
+66.	In which Scenario you will go for Interface or Abstract Class?
+Answer: Interfaces, like classes, define a set of properties, methods, and events. But unlike classes, interfaces do not provide implementation. They are implemented by classes, and defined as separate entities from classes. Even though class inheritance allows your classes to inherit implementation from a base class, it also forces you to make most of your design decisions when the class is first published.
+Abstract classes are useful when creating components because they allow you specify an invariant level of functionality in some methods, but leave the implementation of other methods until a specific implementation of that class is needed. They also version well, because if additional functionality is needed in derived classes, it can be added to the base class without breaking code.
+67.	What are the access-specifiers available in c#?
+Answer: Private, Protected, Public, Internal, Protected Internal. 
+68.	Explain about Protected and protected internal, “internal” access-specifier?
+Answer: protected - Access is limited to the containing class or types derived from the containing class. 
+internal - Access is limited to the current assembly.
+protected internal - Access is limited to the current assembly or types derived from the containing class.
+69.	Difference between type constructor and instance constructor? What is static constructor, when it will be fired? And what is its use?
+Answer: (Class constructor method is also known as type constructor or type initializer) 
+Instance constructor is executed when a new instance of type is created and the class constructor is executed after the type is loaded and before any one of the type members is accessed. (It will get executed only 1st time, when we call any static methods/fields in the same class.) Class constructors are used for static field initialization. Only one class constructor per type is permitted, and it cannot use the vararg (variable argument) calling convention.
+A static constructor is used to initialize a class. It is called automatically to initialize the class before the first instance is created or any static members are referenced. 
+70.	What is Private Constructor? What’s its use? Can you create instance of a class which has Private Constructor?
+Answer: When a class declares only private instance constructors, it is not possible for classes outside the program to derive from the class or to directly create instances of it. (Except Nested classes)
+Make a constructor private if:
+- You want it to be available only to the class itself. For example, you might have a special constructor used only in the implementation of your class' Clone method.
+- You do not want instances of your component to be created. For example, you may have a class containing nothing but Shared utility functions, and no instance data. Creating instances of the class would waste memory. 
+71.	I have 3 overloaded constructors in my class. In order to avoid making instance of the class do I need to make all constructors to private?
+Answer: Yes 
+72.	Overloaded constructor will call default constructor internally?
+Answer: No
+
+73.	What do you know about .NET assemblies?
+Answer: Assemblies are the smallest units of versioning and deployment in the .NET application. Assemblies are also the building blocks for programs such as Web services, Windows services, serviced components, and .NET remoting applications. 
+74.	What’s the difference between private and shared assembly?
+Answer: Private assembly is used inside an application only and does not have to be identified by a strong name. Shared assembly can be used by multiple applications and has to have a strong name. 
+75.	What’s a strong name?
+Answer: A strong name includes the name of the assembly, version number, culture identity, and a public key token. 
+76.	How can you tell the application to look for assemblies at the locations other than its own install?
+Answer: Use the directive in the XML .config file for a given application.
+<probing privatePath=”c:\mylibs; bin\debug” /> 
+should do the trick. Or you can add additional search paths in the Properties box of the deployed application. 
+77.	How can you debug failed assembly binds?
+Answer: Use the Assembly Binding Log Viewer (fuslogvw.exe) to find out the paths searched. 
+78.	Where are shared assemblies stored?
+Answer: Global assembly cache.
+To register in the GaC use the utility GACUTIL.exe
+GACAUTIL /i "<name of dll or exe file >" --This is to install
+
+79.	How can you create a strong name for a .NET assembly?
+Answer: With the help of Strong Name tool (sn.exe)
+
+
+80. What is Serializtaion?
+Serialization (C#)
+
+Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.
+
+How serialization works
+This illustration shows the overall process of serialization:
+
+Serialization graphic
+
+The object is serialized to a stream that carries the data. The stream may also have information about the object's type, such as its version, culture, and assembly name. From that stream, the object can be stored in a database, a file, or memory.
+
+Uses for serialization
+Serialization allows the developer to save the state of an object and re-create it as needed, providing storage of objects as well as data exchange. Through serialization, a developer can perform actions such as:
+
+Sending the object to a remote application by using a web service
+Passing an object from one domain to another
+Passing an object through a firewall as a JSON or XML string
+Maintaining security or user-specific information across applications
+JSON serialization
+The System.Text.Json namespace contains classes for JavaScript Object Notation (JSON) serialization and deserialization. JSON is an open standard that is commonly used for sharing data across the web.
+
+JSON serialization serializes the public properties of an object into a string, byte array, or stream that conforms to the RFC 8259 JSON specification. To control the way JsonSerializer serializes or deserializes an instance of the class:
+
+Use a JsonSerializerOptions object
+Apply attributes from the System.Text.Json.Serialization namespace to classes or properties
+Implement custom converters
+Binary and XML serialization
+The System.Runtime.Serialization namespace contains classes for binary and XML serialization and deserialization.
+
+Binary serialization uses binary encoding to produce compact serialization for uses such as storage or socket-based network streams. In binary serialization, all members, even members that are read-only, are serialized, and performance is enhanced.
+
+ Warning
+
+Binary serialization can be dangerous. For more information, see BinaryFormatter security guide.
+
+XML serialization serializes the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document. XML serialization results in strongly typed classes with public properties and fields that are converted to XML. System.Xml.Serialization contains classes for serializing and deserializing XML. You apply attributes to classes and class members to control the way the XmlSerializer serializes or deserializes an instance of the class.
+
+Making an object serializable
+For binary or XML serialization, you need:
+
+The object to be serialized
+A stream to contain the serialized object
+A System.Runtime.Serialization.Formatter instance
+Apply the SerializableAttribute attribute to a type to indicate that instances of the type can be serialized. An exception is thrown if you attempt to serialize but the type doesn't have the SerializableAttribute attribute.
+
+To prevent a field from being serialized, apply the NonSerializedAttribute attribute. If a field of a serializable type contains a pointer, a handle, or some other data structure that is specific to a particular environment, and the field cannot be meaningfully reconstituted in a different environment, then you may want to make it nonserializable.
+
+If a serialized class contains references to objects of other classes that are marked SerializableAttribute, those objects will also be serialized.
+
+Basic and custom serialization
+Binary and XML serialization can be performed in two ways, basic and custom.
+
+Basic serialization uses .NET to automatically serialize the object. The only requirement is that the class has the SerializableAttribute attribute applied. The NonSerializedAttribute can be used to keep specific fields from being serialized.
+
+When you use basic serialization, the versioning of objects may create problems. You would use custom serialization when versioning issues are important. Basic serialization is the easiest way to perform serialization, but it does not provide much control over the process.
+
+In custom serialization, you can specify exactly which objects will be serialized and how it will be done. The class must be marked SerializableAttribute and implement the ISerializable interface. If you want your object to be deserialized in a custom manner as well, use a custom constructor.
+
+Designer serialization
+Designer serialization is a special form of serialization that involves the kind of object persistence associated with development tools. Designer serialization is the process of converting an object graph into a source file that can later be used to recover the object graph. A source file can contain code, markup, or even SQL table information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
